@@ -15,7 +15,7 @@ veiculos = []
 while True:
     print(''' Menu de opções 
     [1] - Digite 1 para vizualizar o serviços disponiveis
-    [2] - digite 2 para Ver o orçamento de cada serviço
+    [2] - digite 2 para ver o orçamento de cada serviço
     [3] - digite 3 para cadastrar o veículo
     [4] - digite 4 para quantos veiculos estão cadastrados
     [5] - digite 5 para finalizar o programa''')
