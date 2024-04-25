@@ -20,6 +20,7 @@ while True:
 
     escolha = int(input('digite sua escolha: '))
 
+    # Na escolha 1, irá ser mostrados os serviços um a um
     if escolha == 1:
         for servico in servicos:
             print()
