@@ -3,12 +3,15 @@ servicos = ['Alinhamento', 'Ar-condicionado', 'Arrefecimento',
             'Balanceamento e geometria', 'Correias', 'Discos e Patilhas de Freio', 
             'Embreagens', 'Filtros e Velas de Ignição']
 
-#lista criada para os veiculos que precisam serão adicionados
+#lista criada para os veiculos que serão adicionados
 veiculos = []
 
+#lista criada para os placa dos veiculos que serão adicionados
 placas = []
 
+#Dicionario do para o cadastro do cliente
 clientes = {}
+
 # função criada para o menu do programa
 def menu():
     print('-'* 40)
@@ -52,7 +55,7 @@ def veiculos_cadastrados(veiculos, placas):
     for posicao, placa in enumerate(placas):
         print(f'{posicao + 1}- Placa: {placa}')  
 
-
+# Função criada para o cadastro do cliente com nome e email
 def cadastro_cliente(clientes):
     print('Cadastro')
     print('-'*30)
@@ -62,21 +65,21 @@ def cadastro_cliente(clientes):
     print('-'*30)
     
 
-            
+# funcao principal do programa            
 def main():
     while True:
         menu()
         escolha = int(input('digite sua escolha: '))
 
-        # Na escolha 1, irá ser mostrados os serviços um a um
+        # Na escolha 1, a função serviços_disponiveis é chamada
         if escolha == 1:
             print(servicos_disponiveis(servicos))
 
-        # Na escolha 2, irá fazer um laço infinito para que o usuário possa cadastrar os veículos que precisam de um diagnóstico, finalizará quando o usuarío digitar Nao
+        # Na escolha 2, a função cadastro_veiculo é chamada
         elif escolha == 2:
             cadastro_veiculo()
 
-        # Na escolha 3, a usuario ira ver os veiculos e placas cadastrados
+        # Na escolha 3, a função veiculos_cadastrados é chamada
         elif escolha == 3:
             veiculos_cadastrados(veiculos, placas)
 
@@ -92,5 +95,6 @@ def main():
         else:
             print('Opcao invalida! Digite novamente')
             print()
- 
+                    
+# função main chamada 
 main()
